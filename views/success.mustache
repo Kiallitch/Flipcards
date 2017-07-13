@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <h3>Welcome, {{displayName}} you have successfully logged in.</h3>
+    <hr>
+    <form action="/deck" method="POST">
+        <h3>Create a new deck:</h3>
+        <label for="deckName">Deck name:</label>
+        <input name="deckName" id="deckName" type="text">
+        <button id="submitNewDeck" type="submit">Add Deck</button>
+    </form>
+    <ul>
+        {{#Decks}}
+            <li><a href="/Messages/#{{Decks.id}}">#{{Decks.title}}</a>
+            <input type="text" name="updateDeck" id="updateDeck" placeholder="{{Decks.title}}">
+            <a href="/Messages/delete/#{Decks.id}">Delete Deck</a>
+            <a href="/Decks/patch/#{{Decks.id}}">Edit Deck</a>
+            </li>
+        {{/Decks}}
+    </ul>
+
+
+
+    <h3 class="redirect"><a href="/logout">Log Out</a></h3>
+    <footer>Code by Danny Sullivan</footer>
+</body>
+</html>
