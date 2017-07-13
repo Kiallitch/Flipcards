@@ -10,9 +10,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "easyjson": "^0.1.2",
     "express": "^4.15.3",
-    "mustache": "^2.3.0",
+    "express-json": "^1.0.0",
+    "express-session": "^1.15.3",
+    "express-validator": "^3.2.0",
+    "json-object": "0.0.3",
+    "marklogic": "^2.0.2",
+    "mssql": "^4.0.4",
     "mustache-express": "^1.2.5",
-    "npm": "^5.2.0"
+    "sequelize": "^4.3.1",
+    "tedious": "^2.0.0"
   }
 }
